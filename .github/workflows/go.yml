@@ -26,3 +26,10 @@ jobs:
 
     - name: Build
       run: GOOS=linux GOARCH=amd64 go build -o burrow
+    
+    - name: Upload
+      uses: actions/upload-artifact@v1
+      with:
+        name: burrow
+        path: burrow
+
